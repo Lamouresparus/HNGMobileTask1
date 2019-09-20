@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#010A43"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginLeft="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:margin="120dp"
+            android:text="Welcome "
+            android:textColor="#F3D3D3"
+            android:textSize="32dp"
+            android:textStyle="bold|italic"
+            />
+
+        <TextView
+            android:id="@+id/userFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:margin="120dp"
+            android:text="User"
+            android:textColor="#F3D3D3"
+            android:textSize="32dp"
+            android:textStyle="bold|italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:margin="120dp"
+            android:text="!"
+            android:textColor="#F3D3D3"
+            android:textSize="32dp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Dashboard"
+        android:textColor="#ffffff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#f3d3d3"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#010A43"
+            android:text="Your Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Name"
+            android:textColor="#010A43"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            />
+
+        <TextView
+            android:id="@+id/userPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Phone Number"
+            android:textColor="#010A43"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Email"
+            android:textColor="#010A43"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            />
+
+        <TextView
+            android:id="@+id/userDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Birthday"
+            android:textColor="#010A43"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            />
+    </LinearLayout>
+    
+    
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="32dp"
+    android:padding="16dp"
+    android:elevation="12dp"
+    android:background="#eda593">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="About Me"
+        android:textColor="#010A43"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+    
+        <EditText
+            android:id="@+id/aboutUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:inputType="textShortMessage"
+            android:hint="Holla!"/>
+
+        <Button
+            android:id="@+id/submitAboutUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="done"
+            android:textColor="#ffffff"/>
+</LinearLayout>
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="32dp"
+      android:padding="16dp"
+      android:elevation="12dp">
+
+      <Button
+          android:id="@+id/signOut"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#ffff"
+          android:textColor="#010A43"
+          android:text="sign out"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"/>
+  </RelativeLayout>
+
+
+</LinearLayout>

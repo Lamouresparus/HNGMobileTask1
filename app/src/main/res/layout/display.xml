@@ -4,39 +4,38 @@
     android:layout_height="match_parent"
     android:background="#010A43"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fab_margin"
-        android:layout_marginLeft="8dp">
+        android:layout_height="38dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/fab_margin">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:margin="120dp"
             android:text="Welcome "
             android:textColor="#F3D3D3"
             android:textSize="32dp"
-            android:textStyle="bold|italic"
-            />
+            android:textStyle="bold|italic" />
 
         <TextView
             android:id="@+id/userFirstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="120dp"
             android:fontFamily="serif-monospace"
-            android:margin="120dp"
             android:text="User"
             android:textColor="#F3D3D3"
             android:textSize="32dp"
-            android:textStyle="bold|italic"
-            />
+            android:textStyle="bold|italic" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="120dp"
             android:fontFamily="serif-monospace"
-            android:margin="120dp"
             android:text="!"
             android:textColor="#F3D3D3"
             android:textSize="32dp"

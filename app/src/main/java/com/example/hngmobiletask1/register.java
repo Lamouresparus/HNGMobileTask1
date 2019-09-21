@@ -41,24 +41,30 @@ public class register extends AppCompatActivity {
 
                 SharedPreferences.Editor editor = preferences.edit();
 
-                editor.putString("fn", newUserFirstName);
-                editor.putString("ln", newUserLastName);
+                editor.putString("fn",newUserFirstName);
+                editor.putString("ln",newUserLastName);
 
-                editor.putString("email", newUserEmail);
-                editor.putString("phone", newUserPhone);
+                editor.putString("email",newUserEmail);
+                editor.putString("phone",newUserPhone);
 
-                editor.putString("dob", newUserDob);
-                editor.putString("password", newUserPassword);
+                editor.putString("dob",newUserDob);
+                editor.putString("password",newUserPassword);
 
 
                 editor.apply();
 
 
-                Intent loginScreen = new Intent(register.this, MainActivity.class);
+                Intent loginScreen = new Intent (register.this, MainActivity.class);
                 startActivity(loginScreen);
             }
         });
 
 
+
+
+    }
+
+    public void closeView(View view) {
+        finish();
     }
 }

@@ -25,6 +25,15 @@ public class MainActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
+        vEmail = preferences.getString("email", "na");
+
+        if(vEmail != "na"){
+            Intent loginDirectly = new Intent(MainActivity.this, display.class);
+            startActivity(loginDirectly);
+            finish();
+
+        }
+
 
         final EditText loginEmail = (EditText) findViewById(R.id.loginEmail);
         final EditText loginPassword = (EditText) findViewById(R.id.loginPassword);

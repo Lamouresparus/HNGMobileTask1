@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -32,20 +31,21 @@
 
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center_horizontal"
-        android:text="Dashboard"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#ffffff" />
+        android:layout_marginTop="60dp"
+        android:text="Your Dashboard"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/lb"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="48dp"
         android:layout_marginRight="32dp"
+        android:layout_marginBottom="196dp"
         android:background="#f3d3d3"
         android:orientation="vertical"
         android:padding="16dp">
@@ -90,7 +90,7 @@
 
         <TextView
             android:id="@+id/userDob"
-            android:layout_width="match_parent"
+            android:layout_width="322dp"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
             android:text="Birthday"
@@ -100,22 +100,29 @@
             />
     </LinearLayout>
 
-
     <LinearLayout
+        android:id="@+id/lb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_alignBottom="@id/signOut"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="56dp"
         android:background="#eda593"
         android:elevation="12dp"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="About Me"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#010A43" />
+        <Button
+            android:id="@+id/submitAboutUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="done"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/aboutUser"
@@ -125,17 +132,19 @@
             android:inputType="textShortMessage"
             android:paddingTop="8dp" />
 
-        <Button
-            android:id="@+id/submitAboutUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="done"
-            android:textColor="#ffffff" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="About Me"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#010A43" />
     </LinearLayout>
 
-
     <Button
+        android:onClick="logOut"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
         android:id="@+id/signOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -144,4 +153,4 @@
         android:text="sign out"
         android:textColor="#ffffff" />
 
-</LinearLayout>
+</RelativeLayout>

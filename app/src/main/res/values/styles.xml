@@ -1,13 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#010A43</item>
-        <item name="colorPrimaryDark">#EDA593</item>
-        <item name="colorAccent">#F3D3D3</item>
-        <item name="actionModeBackground">#F3D3D3</item>
-        <item name="colorButtonNormal">#010A43</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionModeBackground">@color/modeBackground</item>
+        <item name="colorButtonNormal">@color/normal</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -19,4 +19,6 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <color name="modeBackground">#F3D3D3</color>
+    <color name="normal">#010A43</color>
 </resources>

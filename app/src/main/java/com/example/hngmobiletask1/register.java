@@ -12,10 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class register extends AppCompatActivity {
 
+    private SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+        preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
         final EditText userFirstName = (EditText) findViewById(R.id.firstName);
         final EditText userLastName = (EditText) findViewById(R.id.lastName);
@@ -29,7 +32,6 @@ public class register extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                 String newUserFirstName = userFirstName.getText().toString();
                 String newUserLastName = userLastName.getText().toString();
                 String newUserEmail = email.getText().toString();
@@ -38,22 +40,24 @@ public class register extends AppCompatActivity {
                 String newUserPassword = password.getText().toString();
 
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putString(newUserEmail + newUserPassword + "data",  newUserFirstName + "\n" + newUserLastName + "\n" + newUserEmail + "\n" + newUserPhone + "\n" + newUserDob);
-                editor.commit();
+
+                editor.putString("fn", newUserFirstName);
+                editor.putString("ln", newUserLastName);
+
+                editor.putString("email", newUserEmail);
+                editor.putString("phone", newUserPhone);
+
+                editor.putString("dob", newUserDob);
+                editor.putString("password", newUserPassword);
 
 
-                Intent loginScreen = new Intent (register.this, MainActivity.class);
+                editor.apply();
+
+
+                Intent loginScreen = new Intent(register.this, MainActivity.class);
                 startActivity(loginScreen);
             }
         });
-
-        registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent loginDirect = new Intent (register.this, MainActivity.class);
-                startActivity(loginDirect);
-            }
-    });
 
 
     }
